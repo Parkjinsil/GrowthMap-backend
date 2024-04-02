@@ -20,4 +20,4 @@ import lombok.NoArgsConstructor;
         @Column(name="t",nullable = false)
         private  String textText;
     }
-}
+
