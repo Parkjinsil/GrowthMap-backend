@@ -11,13 +11,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UserDTO {
 
-    private String token;
-    private String userId;
+    private String userid;
     private String email;
     private String password;
     private String name;
     private String interest;
-    private String profileUrl;
+    private String profileurl;
     private String nickname;
 
 }

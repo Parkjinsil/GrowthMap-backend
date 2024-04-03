@@ -1,9 +1,7 @@
 package com.growthMap.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,7 +19,7 @@ import org.hibernate.annotations.DynamicInsert;
 public class User {
 
     @Id
-    private String userId;
+    private String userid;
 
     @Column
     private String email;
@@ -36,7 +34,7 @@ public class User {
     private String interest;
 
     @Column
-    private String profileUrl;
+    private String profileurl;
 
     @Column
     private String nickname;

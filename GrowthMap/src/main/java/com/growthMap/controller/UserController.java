@@ -38,24 +38,24 @@ public class UserController {
     public ResponseEntity register(@RequestBody UserDTO userDTO) {
 
         User user = User.builder()
-                .userId(userDTO.getUserId())
+                .userid(userDTO.getUserid())
                 .email(userDTO.getEmail())
                 .password(userDTO.getPassword())
                 .name(userDTO.getName())
                 .interest(userDTO.getInterest())
-                .profileUrl(userDTO.getProfileUrl())
+                .profileurl(userDTO.getProfileurl())
                 .nickname(userDTO.getNickname())
                 .build();
 
         // 서비스를 이용해 리포지터리에 유저 저장
         User registerMember = userService.create(user);
         UserDTO responseDTO = userDTO.builder()
-                .userId(registerMember.getUserId())
+                .userid(registerMember.getUserid())
                 .email(registerMember.getEmail())
                 .password(registerMember.getPassword())
                 .name(registerMember.getName())
                 .interest(registerMember.getInterest())
-                .profileUrl(registerMember.getProfileUrl())
+                .profileurl(registerMember.getProfileurl())
                 .nickname(registerMember.getNickname())
                 .build();
         return ResponseEntity.ok().body(responseDTO);

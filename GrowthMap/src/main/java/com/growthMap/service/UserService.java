@@ -28,7 +28,7 @@ public class UserService {
     }
 
     public User update(User user) {
-        User target = userDAO.findById(user.getUserId()).orElse(null);
+        User target = userDAO.findById(user.getUserid()).orElse(null);
         if(target!=null) {
             return userDAO.save(user);
         }
